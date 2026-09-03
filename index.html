@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08080a" />
+  <title>WEB DESIGNER — Explore website styles</title>
+  <meta name="description" content="A premium interactive design showroom. Explore 26 website design directions before you decide what kind of website you want." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Ambient grain / vignette layer for the page -->
+  <div class="page-shell">
+
+    <!-- Fixed top brand bar -->
+    <header class="topbar">
+      <a href="#top" class="topbar-brand">WEB<span>DESIGNER</span></a>
+      <div class="topbar-meta">
+        <span class="topbar-dot"></span>
+        <span>Interactive design showroom</span>
+      </div>
+      <div class="topbar-count">26 styles</div>
+    </header>
+
+    <!-- Fixed progress / current design indicator -->
+    <aside class="progress-rail" aria-live="polite">
+      <span id="progressIndex" class="progress-index">01 / 26</span>
+      <span id="progressName" class="progress-name">Portfolio</span>
+      <span class="progress-track"><span id="progressBar" class="progress-bar"></span></span>
+    </aside>
+
+    <!-- HERO -->
+    <section id="top" class="hero" data-section="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-kicker">A design selection experience</div>
+        <h1 class="hero-title">
+          <span class="line line-1">WEB</span>
+          <span class="line line-2">DESIGNER</span>
+        </h1>
+        <p class="hero-sub">Explore website styles. Find your perfect design.</p>
+        <div class="hero-cta">
+          <a href="#showcase" class="btn btn-light">Start exploring <span class="btn-arrow">↓</span></a>
+          <span class="hero-note">26 distinct directions · one choice</span>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll to enter the exhibition</span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- 26 showcase sections are rendered here by app.js -->
+    <main id="showcase" class="showcase"></main>
+
+    <!-- SELECTION SECTION -->
+    <section id="choose" class="choose" data-section="choose">
+      <div class="choose-head">
+        <span class="section-kicker">The collection</span>
+        <h2 class="choose-title">FOUND YOUR STYLE?</h2>
+        <p class="choose-sub">Choose the design direction you'd like for your website.</p>
+      </div>
+
+      <div id="chooserGrid" class="chooser-grid"></div>
+
+      <div id="selectedPanel" class="selected-panel" hidden>
+        <div class="selected-panel-inner">
+          <span class="selected-label">Your selection</span>
+          <strong id="selectedName" class="selected-name"></strong>
+          <p id="selectedDesc" class="selected-desc"></p>
+          <a href="#" id="wantDesign" class="btn btn-accent">I WANT THIS DESIGN</a>
+        </div>
+      </div>
+
+      <p class="choose-note">Prefer something different? <button id="resetChoice" class="text-link" type="button">Clear selection</button> and keep exploring.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-brand">WEB<span>DESIGNER</span></div>
+      <p>Made for curious clients who want to see, feel, and choose how their website should look.</p>
+      <span class="footer-copy">© 2026 — Design showroom</span>
+    </footer>
+  </div>
+
+  <script src="designs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
